@@ -35,10 +35,6 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-app.get('/', function (req, res) {
-  res.end('Hi there!')
-})
-
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
