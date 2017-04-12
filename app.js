@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-console.log('app.js');
+// console.log('app.js');
+
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
@@ -32,6 +34,10 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+app.get('/', function (req, res) {
+  res.end('Hi there!')
+})
 
 // error handler
 app.use(function(err, req, res, next) {
